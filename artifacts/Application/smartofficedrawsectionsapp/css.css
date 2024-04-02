@@ -18,3 +18,27 @@
       margin-top: 20px;
       border: 1px solid #ddd;
     }
+    .selected-area {
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.4); 
+  z-index: 1; 
+  cursor: pointer; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-family: Arial, sans-serif; 
+  font-size: 10px;
+  font-weight:bold;
+}
+.non-selected {
+  position: absolute;
+  background-color: rgba(0, 0, 255, 0.4); 
+  z-index: 1; 
+  cursor: pointer; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-family: Arial, sans-serif; 
+  font-size: 10px;
+  font-weight:bold;
+}

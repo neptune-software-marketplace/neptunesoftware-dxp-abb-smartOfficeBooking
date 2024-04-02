@@ -29,7 +29,7 @@ areas.forEach(function (area) {
     newArea.setAttribute("class", area.class);
     newArea.setAttribute("style", style);
     newArea.setAttribute("roomID", area.roomID);
-    newArea.textContent = area.text;
+    newArea.textContent = area.roomID;
     container.appendChild(newArea);
 });
 

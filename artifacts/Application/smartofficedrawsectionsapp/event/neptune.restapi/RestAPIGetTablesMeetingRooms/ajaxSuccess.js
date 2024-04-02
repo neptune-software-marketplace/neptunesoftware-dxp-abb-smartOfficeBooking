@@ -1,4 +1,5 @@
-BusyDialog.open();
+var response = xhr.responseJSON;
+
 setTimeout(() => {
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
@@ -11,6 +12,21 @@ setTimeout(() => {
     var deleteMode = false;
     var i = 1;
 
+    function initializeRectanglesFromResponse() {
+        response.forEach((area) => {
+            rectangles.push({
+                startX: parseFloat(area.startX),
+                startY: parseFloat(area.startY),
+                endX: parseFloat(area.endX),
+                endY: parseFloat(area.endY),
+                type: area.text, 
+                roomID: area.roomID, 
+                class: area.class
+            });
+        });
+    }
+
+
     var localViewIDDeleteButton = ButtonDelete.getId();
     var hboxControlbuttonDelete = sap.ui.getCore().byId(localViewIDDeleteButton);
     var hboxDomRefbuttonDelete = hboxControlbuttonDelete.getDomRef();
@@ -21,35 +37,33 @@ setTimeout(() => {
         canvas.style.cursor = deleteMode ? "pointer" : "auto";
     });
 
-canvas.addEventListener("click", function (event) {
-    if (!deleteMode) return;
-    var rect = canvas.getBoundingClientRect();
-    var clickX = event.clientX - rect.left;
-    var clickY = event.clientY - rect.top;
+    canvas.addEventListener("click", function (event) {
+        if (!deleteMode) return;
+        var rect = canvas.getBoundingClientRect();
+        var clickX = event.clientX - rect.left;
+        var clickY = event.clientY - rect.top;
 
-    for (var i = rectangles.length - 1; i >= 0; i--) {
-        var rect = rectangles[i];
-        if (
-            clickX >= rect.startX &&
-            clickX <= rect.endX &&
-            clickY >= rect.startY &&
-            clickY <= rect.endY
-        ) {
-            sap.m.MessageBox.confirm("Are you sure you want to delete this?", {
-                actions: [sap.m.MessageBox.Action.YES, sap.m.MessageBox.Action.NO],
-                onClose: function(sAction) {
-                    if (sAction === sap.m.MessageBox.Action.YES) {
-                        rectangles.splice(i, 1);
-                        redrawRectangles(); 
-                    }
-             
-                }
-            });
-            break; 
+        for (var i = rectangles.length - 1; i >= 0; i--) {
+            var rect = rectangles[i];
+            if (
+                clickX >= rect.startX &&
+                clickX <= rect.endX &&
+                clickY >= rect.startY &&
+                clickY <= rect.endY
+            ) {
+                sap.m.MessageBox.confirm("Are you sure you want to delete this?", {
+                    actions: [sap.m.MessageBox.Action.YES, sap.m.MessageBox.Action.NO],
+                    onClose: function (sAction) {
+                        if (sAction === sap.m.MessageBox.Action.YES) {
+                            rectangles.splice(i, 1);
+                            redrawRectangles();
+                        }
+                    },
+                });
+                break;
+            }
         }
-    }
-});
-
+    });
 
     var localViewIDButtonDrawTable = ButtonDrawTable.getId();
     var hboxControlButtonDrawTable = sap.ui.getCore().byId(localViewIDButtonDrawTable);
@@ -110,7 +124,6 @@ canvas.addEventListener("click", function (event) {
     function redrawRectangles() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-
         rectangles.forEach(function (rect) {
             ctx.fillStyle =
                 rect.type === "Meeting-Room" ? "rgba(0, 255, 0, 0.3)" : "rgba(255, 0, 0, 0.3)";
@@ -144,8 +157,8 @@ canvas.addEventListener("click", function (event) {
     }
 
     backgroundImage.onload = function () {
+        initializeRectanglesFromResponse(); 
         redrawRectangles();
-
         BusyDialog.close();
     };
 }, 1000);
