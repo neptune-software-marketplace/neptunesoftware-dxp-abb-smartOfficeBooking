@@ -19,13 +19,12 @@ setTimeout(() => {
                 startY: parseFloat(area.startY),
                 endX: parseFloat(area.endX),
                 endY: parseFloat(area.endY),
-                type: area.text, 
-                roomID: area.roomID, 
-                class: area.class
+                type: area.text,
+                roomID: area.roomID,
+                class: area.class,
             });
         });
     }
-
 
     var localViewIDDeleteButton = ButtonDelete.getId();
     var hboxControlbuttonDelete = sap.ui.getCore().byId(localViewIDDeleteButton);
@@ -92,14 +91,14 @@ setTimeout(() => {
         var rect = canvas.getBoundingClientRect();
         var startX = event.clientX - rect.left;
         var startY = event.clientY - rect.top;
-
+        var roomID = generateUniqueRoomID(drawMode);
         var rectangle = {
             startX: startX,
             startY: startY,
             endX: startX,
             endY: startY,
             type: drawMode,
-            roomID: drawMode + "-" + i,
+            roomID: roomID,
             class: "non-selected",
         };
         i++;
@@ -116,7 +115,19 @@ setTimeout(() => {
             modelModelTables.setData(rectangles);
             redrawRectangles();
         }
-
+        function generateUniqueRoomID(baseID) {
+            if (!i || i < 1) {
+                i = 1; 
+            }
+            var uniqueID = baseID + "-" + i;
+            var existing = rectangles.some((rect) => rect.roomID === uniqueID);
+            while (existing) {
+                i++;
+                uniqueID = baseID + "-" + i;
+                existing = rectangles.some((rect) => rect.roomID === uniqueID);
+            }
+            return uniqueID;
+        }
         canvas.addEventListener("mousemove", moveListener);
         canvas.addEventListener("mouseup", upListener);
     });
@@ -143,7 +154,7 @@ setTimeout(() => {
 
             ctx.font = "12px Arial";
             ctx.fillStyle = "black";
-            var text = rect.type === "Meeting-Room" ? "Meeting-Room" : "Table";
+            var text = rect.roomID;
 
             var textWidth = ctx.measureText(text).width;
             var textHeight = parseInt(ctx.font, 10);
@@ -157,7 +168,7 @@ setTimeout(() => {
     }
 
     backgroundImage.onload = function () {
-        initializeRectanglesFromResponse(); 
+        initializeRectanglesFromResponse();
         redrawRectangles();
         BusyDialog.close();
     };
