@@ -1,0 +1,27 @@
+var today = new Date();
+var day = today.getDate();
+var month = today.toLocaleString("default", { month: "short" });
+var year = today.getFullYear();
+var hour = 9;
+var minute = 0;
+var second = 0;
+var selectedDate = DateTimePickerStart.getValue();
+var currentDate = new Date();
+
+var formattedOtherDate = currentDate.toLocaleString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+});
+
+if (selectedDate < formattedOtherDate) {
+    DateTimePickerStart.setValue(formattedOtherDate);
+
+} else if (selectedDate === formattedOtherDate) {
+} else {
+
+}

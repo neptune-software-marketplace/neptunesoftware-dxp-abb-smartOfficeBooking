@@ -1,0 +1,107 @@
+{
+	"id": "1fe5fe42-7eea-ee11-aaee-000d3a64f286",
+	"createdAt": "2024-03-25T08:04:11.586Z",
+	"createdBy": "kaan.koska@neptune-software.com",
+	"git": {
+		"remote": "https://github.com/neptune-software-marketplace/neptunesoftware-dxp-abb-smartOfficeBooking"
+	},
+	"name": "neptunesoftware-dxp-abb-smart-office",
+	"description": null,
+	"ver": "24.4.2.1010",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "d051aa19-03ed-ee11-aaee-000d3a64f286",
+			"application": "smartofficereservationapp",
+			"title": "",
+			"description": "",
+			"package": {
+				"id": "1FE5FE42-7EEA-EE11-AAEE-000D3A64F286"
+			}
+		},
+		{
+			"id": "84b7000c-03ed-ee11-aaee-000d3a64f286",
+			"application": "smartofficedrawsectionsapp",
+			"title": "",
+			"description": "",
+			"package": {
+				"id": "1FE5FE42-7EEA-EE11-AAEE-000D3A64F286"
+			}
+		}
+	],
+	"api": [
+		{
+			"id": "94f5cf7a-7fea-ee11-aaee-000d3a64f286",
+			"name": "Smart Office Bookings",
+			"description": null,
+			"apiGroup": null
+		},
+		{
+			"id": "92cbfddf-7fea-ee11-aaee-000d3a64f286",
+			"name": "Smart_Office_Rooms_and_Tables",
+			"description": null,
+			"apiGroup": null
+		}
+	],
+	"odataSource": [],
+	"odataMock": [],
+	"dictionary": [
+		{
+			"id": "94748fbd-7fea-ee11-aaee-000d3a64f286",
+			"name": "smart_office_rooms_and_tables",
+			"description": null
+		},
+		{
+			"id": "613d4970-7eea-ee11-aaee-000d3a64f286",
+			"name": "smart_office_booking_room_log",
+			"description": null
+		}
+	],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [
+		{
+			"id": "a99bdd25-03ed-ee11-aaee-000d3a64f286",
+			"description": null,
+			"name": "Smart Office"
+		},
+		{
+			"id": "4cd02246-03ed-ee11-aaee-000d3a64f286",
+			"description": null,
+			"name": "Smart Office Admin"
+		}
+	],
+	"category": [
+		{
+			"id": "f66d375f-03ed-ee11-aaee-000d3a64f286",
+			"description": null,
+			"name": "SmartOffice"
+		}
+	],
+	"launchpad": [
+		{
+			"id": "a1bfd38d-02ed-ee11-aaee-000d3a64f286",
+			"name": "smartOffice",
+			"description": null
+		}
+	],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"department": [],
+	"script_scheduler": [],
+	"wf_definition": [],
+	"connector": [],
+	"events": [],
+	"code_snippets": [],
+	"wf_determination": [],
+	"wf_taskaction": []
+}

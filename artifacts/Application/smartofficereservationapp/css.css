@@ -1,0 +1,126 @@
+.selected-area {
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.4); 
+  z-index: 1; 
+  cursor: pointer; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-family: Arial, sans-serif; 
+  font-size: 10px;
+  font-weight:bold;
+}
+.non-selected {
+  position: absolute;
+  background-color: rgba(0, 0, 255, 0.4); 
+  z-index: 1; 
+  cursor: pointer; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-family: Arial, sans-serif; 
+  font-size: 10px;
+  font-weight:bold;
+}
+.TimeButtons{
+  background-color: white;
+  color: navy;
+  border: 1px solid navy;
+  margin: 3px;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+// .selected-tables {
+//   position: absolute;
+//   background-color: rgba(255, 0, 0, 0.4); 
+//   z-index: 1; 
+//   cursor: pointer; 
+//   display: flex;
+//   justify-content: center; 
+//   align-items: center; 
+//   font-family: Arial, sans-serif; 
+//   font-size: 7px; 
+//   font-weight:bold
+// }
+// .non-selected-Table {
+//   position: absolute;
+//   background-color: rgba(0, 0, 255, 0.4); 
+//   z-index: 1; 
+//   cursor: pointer; 
+//   display: flex;
+//   justify-content: center; 
+//   align-items: center; 
+//   font-family: Arial, sans-serif; 
+//   font-size: 9px; 
+//   font-weight:bold;
+// }
+// .selected-Table {
+//   position: absolute;
+//   background-color: rgba(255, 0, 0, 0.4); 
+//   z-index: 1; 
+//   cursor: pointer; 
+//   display: flex;
+//   justify-content: center; 
+//   align-items: center; 
+//   font-family: Arial, sans-serif; 
+//   font-size: 9px; 
+//   font-weight:bold;
+// }
+// .non-selected-Meeting-Room {
+//   position: absolute;
+//   background-color: rgba(0, 0, 255, 0.4); 
+//   z-index: 1; 
+//   cursor: pointer;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center; 
+//   font-family: Arial, sans-serif;
+//   font-size: 13px;
+//   font-weight:bold
+// }
+// .selected-meetingRoom {
+//   position: absolute;
+//   background-color: rgba(0, 0, 255, 0.4); 
+//   z-index: 1; 
+//   cursor: pointer;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center; 
+//   font-family: Arial, sans-serif;
+//   font-size: 12px;
+//   font-weight:bold
+// }
+// // .non-selected-area-tables-vertical {
+// //   position: absolute;
+// //   background-color: rgba(0, 255, 0, 0.4); 
+// //   z-index: 1; 
+// //   cursor: pointer;
+// //   display: flex;
+// //   flex-direction: column; 
+// //   justify-content: center;
+// //   align-items: center; 
+// //   font-family: Arial, sans-serif;
+// //   font-size: 7px;
+// //   font-weight:bold
+// // }
+// // .selected-area-tables-vertical {
+// //   position: absolute;
+// //   background-color: rgba(255, 0, 0, 0.4); 
+// //   z-index: 1; 
+// //   cursor: pointer;
+// //   display: flex;
+// //   flex-direction: column; 
+// //   justify-content: center;
+// //   align-items: center; 
+// //   font-family: Arial, sans-serif;
+// //   font-size: 7px;
+// //   font-weight:bold
+// // }
+
+// .vertical-text {
+//   position: absolute;
+//   writing-mode: vertical-rl; 
+//   text-orientation: upright; 
+// }

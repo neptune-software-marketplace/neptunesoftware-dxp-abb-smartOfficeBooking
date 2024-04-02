@@ -1,0 +1,87 @@
+{
+	"id": "613d4970-7eea-ee11-aaee-000d3a64f286",
+	"createdAt": "2024-03-25T08:05:32.003Z",
+	"createdBy": "kaan.koska@neptune-software.com",
+	"fields": [
+		{
+			"id": "61456396-fc71-42f1-d2cb-70b465b17a63",
+			"fieldName": "roomID",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "71e264a1-638a-40c0-daaf-372b24fad9b9",
+			"fieldName": "belongOffice",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "f9eb03f0-76dc-44e7-9b0f-c1fc0696b2b9",
+			"fieldName": "booked",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "2a110da5-6708-495b-bf6f-8f96c24647d4",
+			"fieldName": "username",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "f409ddd4-4edf-4520-cf22-2a49d8fd4536",
+			"fieldName": "totalMeetingTime",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "7f57f804-b323-42af-e5bc-e1967e4c599d",
+			"fieldName": "hourStart",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "33c42e37-aa9a-4d9a-e09c-ee5fcb38903f",
+			"fieldName": "hourEnd",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "085cd92d-5785-4880-d758-9d82709272c3",
+			"fieldName": "details",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "3d857cc8-94c5-420b-a1d5-a377f7e62b43",
+			"fieldName": "reservationDate",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "c3eac3ae-03c3-44b5-dd9a-7acc95a2dccf",
+			"fieldName": "reservationMadeDate",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "smart_office_booking_room_log",
+	"description": null,
+	"ver": "24.3.25.115",
+	"enableAudit": false,
+	"includeDataInPackage": false,
+	"package": "1fe5fe42-7eea-ee11-aaee-000d3a64f286",
+	"rolesRead": [],
+	"rolesWrite": []
+}

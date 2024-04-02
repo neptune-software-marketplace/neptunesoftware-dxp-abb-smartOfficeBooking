@@ -1,0 +1,80 @@
+{
+	"id": "94748fbd-7fea-ee11-aaee-000d3a64f286",
+	"createdAt": "2024-03-25T08:14:49.670Z",
+	"createdBy": "kaan.koska@neptune-software.com",
+	"fields": [
+		{
+			"id": "ebddb832-5aac-4c9e-c7ac-75ae536b322b",
+			"fieldName": "roomID",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "9adff6d6-3b73-426f-e876-833e81e49df4",
+			"fieldName": "class",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "118069d3-617c-4128-c9e5-e401c39aa92e",
+			"fieldName": "text",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "498dcb13-b5f4-48ab-cb75-d71370a39683",
+			"fieldName": "startX",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "a5ff0b82-631f-45fe-da3a-b640d9a8124b",
+			"fieldName": "startY",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "9a334cf8-e9d0-42e1-f925-ab4affd6f461",
+			"fieldName": "endX",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "0c5ff593-30a2-4b8e-a668-e3fe02f5414c",
+			"fieldName": "endY",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "b4ecdb34-e8ee-4c2e-eed6-91c9268c31ac",
+			"fieldName": "image",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "5cb20955-3669-4e3d-9332-9575957fc352",
+			"fieldName": "equipments",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "smart_office_rooms_and_tables",
+	"description": null,
+	"ver": "24.3.31.1510",
+	"enableAudit": false,
+	"includeDataInPackage": false,
+	"package": "1fe5fe42-7eea-ee11-aaee-000d3a64f286",
+	"rolesRead": [],
+	"rolesWrite": []
+}

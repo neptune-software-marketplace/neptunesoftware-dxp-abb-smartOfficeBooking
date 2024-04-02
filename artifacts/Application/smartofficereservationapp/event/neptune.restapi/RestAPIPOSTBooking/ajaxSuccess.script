@@ -1,0 +1,12 @@
+sap.m.MessageToast.show("Your Room was Booked Successfully");
+apiRestAPIGetTablesMeetingRooms();
+apiRestAPI_Smart_Office_Bookings();
+var username = AppCache.userInfo.username;
+var options = {
+    parameters: {
+        "where": JSON.stringify({"createdBy": username})
+    }
+};
+apiRestAPIGetReservationsForUser(options);
+DateTimePickerStart.setDateValue();
+DialogBook.close();
