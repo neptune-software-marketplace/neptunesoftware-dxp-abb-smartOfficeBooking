@@ -92,34 +92,6 @@
 									],
 									"data": [
 										{
-											"fieldNo": "470a1303-a667-444c-e683-bc8daefa9309",
-											"fieldName": "Button",
-											"fieldParent": "bd58d47d-9058-42a8-8063-f99e887d4387",
-											"fieldType": "sap.m.Button",
-											"script": "",
-											"customComponent": false,
-											"request": [],
-											"response": [],
-											"attributes": [
-												{
-													"attribute": "text",
-													"grouping": "Properties",
-													"value": "add",
-													"script": "",
-													"translation": []
-												},
-												{
-													"attribute": "press",
-													"grouping": "Events",
-													"value": "apiRestAPIGetTablesMeetingRooms();",
-													"script": "apiRestAPIGetTablesMeetingRooms();",
-													"language": "javascript",
-													"translation": []
-												}
-											],
-											"data": []
-										},
-										{
 											"fieldNo": "a38f6586-439f-4c88-8a90-2c3a0fb985cf",
 											"fieldName": "ButtonDrawTable",
 											"fieldParent": "bd58d47d-9058-42a8-8063-f99e887d4387",
@@ -431,7 +403,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "24.4.2.1523",
+	"ver": "24.4.2.1530",
 	"application": "smartofficedrawsectionsapp",
 	"title": "",
 	"description": "",

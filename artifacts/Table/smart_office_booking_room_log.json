@@ -78,9 +78,9 @@
 	"foreignKeys": [],
 	"name": "smart_office_booking_room_log",
 	"description": null,
-	"ver": "24.3.25.115",
+	"ver": "24.4.2.1531",
 	"enableAudit": false,
-	"includeDataInPackage": false,
+	"includeDataInPackage": true,
 	"package": "1fe5fe42-7eea-ee11-aaee-000d3a64f286",
 	"rolesRead": [],
 	"rolesWrite": []
