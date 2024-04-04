@@ -26,3 +26,7 @@ a{
   color: black;
   text-decoration: none;
 }
+.TextRemainingHours{
+  color: red;
+  font-weight: bold;
+}

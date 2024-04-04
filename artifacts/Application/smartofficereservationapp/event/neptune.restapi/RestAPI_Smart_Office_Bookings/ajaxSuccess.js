@@ -1,8 +1,6 @@
 var response = xhr.responseJSON;
 var areas = response;
 var today = new Date();
-var filteredRoomIDs = [];
-var notReservedRoomIDs = [];
 var todayFormatted = today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
 var filteredRoomIDs = [];
 var notReservedRoomIDs = [];
@@ -12,9 +10,9 @@ areas.forEach(function (area) {
     var endHourMinute = area.hourEnd.split(":");
     var reservationDateParts = area.reservationDate.split("/");
     var reservationDate = new Date(
-        reservationDateParts[2],
-        reservationDateParts[0] - 1,
-        reservationDateParts[1]
+        parseInt(reservationDateParts[2]),
+        parseInt(reservationDateParts[0]) - 1,
+        parseInt(reservationDateParts[1])
     );
 
     var startTime = new Date(
@@ -32,10 +30,17 @@ areas.forEach(function (area) {
         parseInt(endHourMinute[1])
     );
 
+    var now = new Date(
+        today.getFullYear(),
+        today.getMonth(),
+        today.getDate(),
+        today.getHours(),
+        today.getMinutes()
+    );
     if (todayFormatted === area.reservationDate) {
-        if (startTime.getHours() == 9 && endTime.getHours() == 18) {
+        if (todayFormatted === area.reservationDate && now >= startTime && now <= endTime) {
             filteredRoomIDs.push(area.roomID);
-        } else {
+        }else{
             notReservedRoomIDs.push(area.roomID);
         }
     } else {
@@ -56,6 +61,7 @@ if (filteredRoomIDs.length > 0) {
         apiRestAPIUpdateTablesForReservation(options);
     });
 }
+
 if (notReservedRoomIDs.length > 0) {
     notReservedRoomIDs.forEach(function (roomID) {
         var options = {
@@ -74,7 +80,7 @@ if (notReservedRoomIDs.length == 0 && filteredRoomIDs.length == 0) {
     App.to(Page);
     var options = {
         parameters: {
-            where: JSON.stringify({"class": "selected-area"})
+            where: JSON.stringify({ class: "selected-area" }),
         },
         data: {
             class: "non-selected",
@@ -82,15 +88,3 @@ if (notReservedRoomIDs.length == 0 && filteredRoomIDs.length == 0) {
     };
     apiRestAPIUpdateTables(options);
 }
-
-
-
-
-
-
-
-
-
-
-
-

@@ -64,3 +64,9 @@ var elements = document.getElementsByClassName("non-selected");
 for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener("click", functionToCall);
 }
+
+var elements1 = document.getElementsByClassName("selected-area");
+
+for (var i = 0; i < elements1.length; i++) {
+    elements1[i].addEventListener("click", functionToCall);
+}

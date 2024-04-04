@@ -845,7 +845,7 @@
 						{
 							"attribute": "afterClose",
 							"grouping": "Events",
-							"value": "oListYourBookings1.setVisible(false);",
+							"value": "Anonymous Function",
 							"script": "oListYourBookings1.setVisible(false);",
 							"language": "javascript",
 							"translation": []
@@ -871,6 +871,75 @@
 								}
 							],
 							"data": []
+						},
+						{
+							"fieldNo": "986dd8f1-234f-4820-d972-e3966e619d09",
+							"fieldName": "HBox9",
+							"fieldParent": "3eb4722b-60fa-417c-f0f2-535b60ff3e46",
+							"fieldType": "sap.m.HBox",
+							"script": "",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "width",
+									"grouping": "Properties",
+									"value": "100%",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "renderType",
+									"grouping": "Properties",
+									"value": "Bare",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "justifyContent",
+									"grouping": "Properties",
+									"value": "Center",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "fitContainer",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "c5fc7532-cfbc-468a-d9db-5e494fb661bc",
+									"fieldName": "TextRemainingHours",
+									"fieldParent": "986dd8f1-234f-4820-d972-e3966e619d09",
+									"fieldType": "sap.m.Text",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "styleClassMargin",
+											"grouping": "Properties",
+											"value": "sapUiTinyMarginTop",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "styleClass",
+											"grouping": "Properties",
+											"value": "TextRemainingHours",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								}
+							]
 						},
 						{
 							"fieldNo": "ebbf4efb-c96a-4e97-cbc3-b4c2d21eb34c",
@@ -2221,7 +2290,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "24.4.2.1524",
+	"ver": "24.4.3.1632",
 	"application": "smartofficereservationapp",
 	"title": "",
 	"description": "",

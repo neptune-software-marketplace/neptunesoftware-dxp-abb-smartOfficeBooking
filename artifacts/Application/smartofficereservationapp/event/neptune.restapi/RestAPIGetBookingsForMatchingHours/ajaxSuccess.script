@@ -4,10 +4,16 @@ const todayDate = today.getMonth() + 1 + "/" + today.getDate() + "/" + today.get
 const todayReservations = reservations.filter(
     (reservation) => reservation.reservationDate === todayDate
 );
-modeloListYourBookings1.setData(todayReservations);
 
+modeloListYourBookings1.setData(todayReservations);
 if (todayReservations.length > 0) {
+    TextRemainingHours.setText(calculateTimeLeftForCurrentReservation(todayReservations));
     oListYourBookings1.setVisible(true);
 } else {
+    TextRemainingHours.setText("");
     oListYourBookings1.setVisible(false);
 }
+
+
+
+

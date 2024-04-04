@@ -43,17 +43,15 @@ function checkReservationConflict(startHour, endHour, date, roomID) {
     return "no conflict";
 }
 
-if (meetingTime == "All Day") {
-    var options = {
-        parameters: {
-            where: JSON.stringify({ roomID: roomName }),
-        },
-        data: {
-            class: "selected-Table",
-        },
-    };
-    apiRestAPIUpdateTablesForReservation(options);
-}
+// var options = {
+//     parameters: {
+//         where: JSON.stringify({ roomID: roomName }),
+//     },
+//     data: {
+//         class: "selected-area",
+//     },
+// };
+// apiRestAPIUpdateTablesForReservation(options);
 
 var options = {
     data: {
